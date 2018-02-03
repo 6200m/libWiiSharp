@@ -1,6 +1,6 @@
 ﻿/* This file is part of libWiiSharp
  * Copyright (C) 2009 Leathl
- * 
+ *
  * libWiiSharp is free software: you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published
  * by the Free Software Foundation, either version 3 of the License, or
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -25,6 +25,7 @@ namespace libWiiSharp
     {
         Standard = 0x00,
         Korean = 0x01,
+        vWii = 0x02,
     }
 
     public class Ticket : IDisposable
@@ -189,7 +190,7 @@ namespace libWiiSharp
 
             ms.Dispose();
         }
-        
+
         /// <summary>
         /// Loads a tik file.
         /// </summary>
@@ -532,7 +533,19 @@ namespace libWiiSharp
 
         private void decryptTitleKey()
         {
-            byte[] ckey = (commonKeyIndex == 0x01) ? CommonKey.GetKoreanKey() : CommonKey.GetStandardKey();
+            byte[] ckey = CommonKey.GetStandardKey();
+            switch(commonKeyIndex)
+            {
+              case 0x00:
+                ckey = CommonKey.GetStandardKey();
+                break;
+              case 0x01:
+                ckey = CommonKey.GetKoreanKey();
+                break;
+              case 0x02:
+                ckey = CommonKey.GetvWiiKey();
+                break;
+            }
             byte[] iv = BitConverter.GetBytes(Shared.Swap(titleId));
             Array.Resize(ref iv, 16);
 
