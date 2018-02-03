@@ -573,7 +573,19 @@ namespace libWiiSharp
         private void encryptTitleKey()
         {
             commonKeyIndex = newKeyIndex;
-            byte[] ckey = (commonKeyIndex == 0x01) ? CommonKey.GetKoreanKey() : CommonKey.GetStandardKey();
+            byte[] ckey = CommonKey.GetStandardKey();
+            switch(commonKeyIndex)
+            {
+              case 0x00:
+                ckey = CommonKey.GetStandardKey();
+                break;
+              case 0x01:
+                ckey = CommonKey.GetKoreanKey();
+                break;
+              case 0x02:
+                ckey = CommonKey.GetvWiiKey();
+                break;
+            }
             byte[] iv = BitConverter.GetBytes(Shared.Swap(titleId));
             Array.Resize(ref iv, 16);
 
