@@ -536,7 +536,7 @@ namespace libWiiSharp
             byte[] ckey = CommonKey.GetStandardKey();
             switch(commonKeyIndex)
             {
-              case 0x00:
+              default:
                 ckey = CommonKey.GetStandardKey();
                 break;
               case 0x01:
@@ -576,7 +576,7 @@ namespace libWiiSharp
             byte[] ckey = CommonKey.GetStandardKey();
             switch(commonKeyIndex)
             {
-              case 0x00:
+              default:
                 ckey = CommonKey.GetStandardKey();
                 break;
               case 0x01:

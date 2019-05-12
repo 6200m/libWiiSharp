@@ -1,13 +1,17 @@
-﻿-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-           libWiiSharp
-            by Leathl
-   libwiisharp.googlecode.com
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+﻿-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                 libWiiSharp
+      by Leathl (Mod by WiiDatabase.de)
+  https://github.com/WiiDatabase/libwiisharp
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
 Changelog:
 -=-=-=-=-=-
+
+Version 0.31 (Mod)
+	- Added support for the vWii Common-Key
+	- Added Korea to TMD region
 
 Version 0.3
 	- Added support to change the common key index of the ticket in the WAD class

@@ -1,8 +1,8 @@
-﻿-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-           libWiiSharp
-            by Leathl
-   libwiisharp.googlecode.com
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+﻿-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                 libWiiSharp
+      by Leathl (Mod by WiiDatabase.de)
+  https://github.com/WiiDatabase/libwiisharp
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 
 
